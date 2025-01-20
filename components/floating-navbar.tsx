@@ -68,14 +68,14 @@ export function FloatingNavbar() {
               </Link>
             </nav>
             <div className="flex items-center space-x-4">
-              <Button
+              {/* <Button
                 variant="ghost"
                 className="hidden md:inline-flex text-white hover:bg-white/10"
               >
                 Sign In
-              </Button>
+              </Button> */}
               <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white">
-                Get Started
+                Book a Meeting
               </Button>
             </div>
           </div>

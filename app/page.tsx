@@ -8,7 +8,6 @@ import {
   BarChart3,
   Bot,
 } from "lucide-react";
-import Image from "next/image";
 import { ContactForm } from "@/components/contact-form";
 import { ServiceCard } from "@/components/service-card";
 import { TestimonialCard } from "@/components/testimonial-card";
@@ -16,6 +15,7 @@ import { CTASection } from "@/components/cta-section";
 import { BookingCTA } from "@/components/booking-cta";
 import { Footer } from "@/components/footer";
 import { FloatingNavbar } from "@/components/floating-navbar";
+import { DashboardPreview } from "@/components/dashboard-preview";
 
 export default function Home() {
   return (
@@ -36,7 +36,7 @@ export default function Home() {
                 <h1 className="text-3xl font-bold tracking-tighter text-white sm:text-5xl xl:text-6xl/none">
                   Transform Your Home Improvement Business with AI
                 </h1>
-                <p className="max-w-[600px] text-gray-200 md:text-xl lg:text-base xl:text-xl">
+                <p className="max-w-full md:max-w-[600px] text-gray-200 md:text-xl lg:text-base xl:text-xl">
                   Automate your operations, enhance customer engagement, and
                   boost revenue with our cutting-edge AI solutions.
                 </p>
@@ -58,13 +58,7 @@ export default function Home() {
                 </Button>
               </div>
             </div>
-            <Image
-              src="/placeholder.svg?height=550&width=550"
-              width={550}
-              height={550}
-              alt="AI Dashboard Preview"
-              className="mx-auto aspect-video overflow-hidden rounded-xl object-cover lg:aspect-square relative z-10"
-            />
+            <DashboardPreview />
           </div>
         </div>
       </section>
@@ -85,7 +79,7 @@ export default function Home() {
               <h2 className="text-3xl font-bold tracking-tighter text-white sm:text-5xl">
                 Our Services
               </h2>
-              <p className="max-w-[900px] text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              <p className="max-w-full md:max-w-[900px] text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Comprehensive AI solutions tailored for the home improvement
                 industry
               </p>
@@ -154,7 +148,7 @@ export default function Home() {
               <h2 className="text-3xl font-bold tracking-tighter text-white sm:text-5xl">
                 Why Choose Us
               </h2>
-              <p className="max-w-[900px] text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              <p className="max-w-full md:max-w-[900px] text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Industry expertise combined with cutting-edge AI technology
               </p>
             </div>
@@ -195,7 +189,7 @@ export default function Home() {
               <h2 className="text-3xl font-bold tracking-tighter text-white sm:text-5xl">
                 Get in Touch
               </h2>
-              <p className="max-w-[900px] text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              <p className="max-w-full md:max-w-[900px] text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Ready to transform your business? Contact us today for a free
                 consultation.
               </p>
