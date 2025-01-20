@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Calendar, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 interface CTASectionProps {
   title: string;
