@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button";
+import { MEETING_LINK } from "@/lib/constants";
 import { Calendar } from "lucide-react";
 
 export function BookingCTA() {
   return (
     <div className="fixed bottom-8 right-8 z-50">
       <Button
+        onClick={() => window.open(MEETING_LINK)}
         size="lg"
         className="bg-gradient-to-r from-purple-600/80 to-blue-600/80 text-white font-medium
           glass-effect border border-white/20 shadow-lg 

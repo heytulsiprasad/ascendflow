@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { MEETING_LINK } from "@/lib/constants";
 import { Bot } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -74,7 +75,10 @@ export function FloatingNavbar() {
               >
                 Sign In
               </Button> */}
-              <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white">
+              <Button
+                onClick={() => window.open(MEETING_LINK)}
+                className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white"
+              >
                 Book a Meeting
               </Button>
             </div>

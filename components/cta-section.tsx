@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button";
+import { MEETING_LINK } from "@/lib/constants";
 import { ArrowRight } from "lucide-react";
 
 interface CTASectionProps {
   title: string;
   subtitle: string;
   buttonText: string;
+  buttonLink?: string;
   gradient?: string;
 }
 
@@ -12,6 +14,7 @@ export function CTASection({
   title,
   subtitle,
   buttonText,
+  buttonLink = MEETING_LINK,
   gradient = "from-purple-600 via-pink-600 to-blue-600",
 }: CTASectionProps) {
   return (
@@ -25,6 +28,7 @@ export function CTASection({
           <p className="text-xl text-gray-300 max-w-[600px]">{subtitle}</p>
           <Button
             size="lg"
+            onClick={() => window.open(buttonLink)}
             className="mt-6 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
           >
             {buttonText}
