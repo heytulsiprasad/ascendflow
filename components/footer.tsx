@@ -1,15 +1,23 @@
-import { Button } from "@/components/ui/button"
-import { Facebook, Twitter, Linkedin, Instagram, Youtube, Mail } from "lucide-react"
+import { Button } from "@/components/ui/button";
+import {
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Youtube,
+  Mail,
+} from "lucide-react";
 
 export function Footer() {
   return (
     <footer className="w-full bg-black/50 border-t border-gray-800">
-      <div className="container px-4 py-12 md:px-6">
+      <div className="  px-4 py-12 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-white">AscendFlow</h3>
             <p className="text-sm text-gray-400">
-              Transforming home improvement businesses with cutting-edge AI solutions.
+              Transforming home improvement businesses with cutting-edge AI
+              solutions.
             </p>
           </div>
           <div className="space-y-4">
@@ -65,19 +73,39 @@ export function Footer() {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-white">Connect</h4>
             <div className="flex space-x-4">
-              <Button size="icon" variant="ghost" className="hover:text-purple-400">
+              <Button
+                size="icon"
+                variant="ghost"
+                className="hover:text-purple-400"
+              >
                 <Facebook className="h-4 w-4" />
               </Button>
-              <Button size="icon" variant="ghost" className="hover:text-purple-400">
+              <Button
+                size="icon"
+                variant="ghost"
+                className="hover:text-purple-400"
+              >
                 <Twitter className="h-4 w-4" />
               </Button>
-              <Button size="icon" variant="ghost" className="hover:text-purple-400">
+              <Button
+                size="icon"
+                variant="ghost"
+                className="hover:text-purple-400"
+              >
                 <Linkedin className="h-4 w-4" />
               </Button>
-              <Button size="icon" variant="ghost" className="hover:text-purple-400">
+              <Button
+                size="icon"
+                variant="ghost"
+                className="hover:text-purple-400"
+              >
                 <Instagram className="h-4 w-4" />
               </Button>
-              <Button size="icon" variant="ghost" className="hover:text-purple-400">
+              <Button
+                size="icon"
+                variant="ghost"
+                className="hover:text-purple-400"
+              >
                 <Youtube className="h-4 w-4" />
               </Button>
             </div>
@@ -88,7 +116,9 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-gray-400">© 2024 AscendFlow. All rights reserved.</p>
+          <p className="text-sm text-gray-400">
+            © 2024 AscendFlow. All rights reserved.
+          </p>
           <div className="flex gap-4">
             <a href="#" className="text-sm text-gray-400 hover:text-white">
               Privacy Policy
@@ -100,6 +130,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
-

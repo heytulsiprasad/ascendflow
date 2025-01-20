@@ -29,14 +29,14 @@ export default function Home() {
           <div className="absolute inset-0 bg-[conic-gradient(from_0deg_at_50%_50%,rgb(255_0_153/0.15)_0deg,rgb(120_0_255/0.15)_120deg,rgb(0_255_255/0.15)_240deg)] animate-gradient" />
           <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-blue-900 to-black opacity-80" />
         </div>
-        <div className="container px-4 md:px-6 relative z-10">
+        <div className="  px-4 md:px-6 relative z-10">
           <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
             <div className="flex flex-col justify-center space-y-4 text-center lg:text-left">
               <div className="space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter text-white sm:text-5xl xl:text-6xl/none">
                   Transform Your Home Improvement Business with AI
                 </h1>
-                <p className="mx-auto max-w-[600px] text-gray-200 md:text-xl lg:text-base xl:text-xl">
+                <p className="max-w-[600px] text-gray-200 md:text-xl lg:text-base xl:text-xl">
                   Automate your operations, enhance customer engagement, and
                   boost revenue with our cutting-edge AI solutions.
                 </p>
@@ -79,7 +79,7 @@ export default function Home() {
 
       {/* Services Section */}
       <section className="w-full py-12 md:py-24 lg:py-32 bg-white/5">
-        <div className="container px-4 md:px-6">
+        <div className="  px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter text-white sm:text-5xl">
@@ -148,7 +148,7 @@ export default function Home() {
 
       {/* Why Choose Us Section */}
       <section className="w-full py-12 md:py-24 lg:py-32">
-        <div className="container px-4 md:px-6">
+        <div className="  px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter text-white sm:text-5xl">
@@ -189,7 +189,7 @@ export default function Home() {
 
       {/* Contact Section */}
       <section className="w-full py-12 md:py-24 lg:py-32 bg-white/5">
-        <div className="container px-4 md:px-6">
+        <div className="  px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter text-white sm:text-5xl">

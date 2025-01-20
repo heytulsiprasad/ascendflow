@@ -33,7 +33,7 @@ export function FloatingNavbar() {
       }`}
     >
       <div className="mx-4 my-4 glass-effect border border-white/10 rounded-full dark:bg-gray-900 dark:border-gray-700">
-        <div className="container mx-auto">
+        <div className="  mx-auto">
           <div className="flex items-center justify-between h-16 px-4">
             <Link href="/" className="flex items-center space-x-2">
               <Bot className="h-8 w-8 text-purple-400" />
