@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import {
   ChevronRight,
@@ -16,6 +18,21 @@ import { BookingCTA } from "@/components/booking-cta";
 import { Footer } from "@/components/footer";
 import { FloatingNavbar } from "@/components/floating-navbar";
 import { DashboardPreview } from "@/components/dashboard-preview";
+import { motion } from "framer-motion";
+
+const fadeIn = {
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: 20 },
+};
+
+const stagger = {
+  animate: {
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
 
 export default function Home() {
   return (
@@ -31,8 +48,13 @@ export default function Home() {
         </div>
         <div className="  px-4 md:px-6 relative z-10">
           <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-            <div className="flex flex-col justify-center space-y-4 text-center lg:text-left">
-              <div className="space-y-2">
+            <motion.div
+              initial="initial"
+              animate="animate"
+              variants={stagger}
+              className="flex flex-col justify-center space-y-4 text-center lg:text-left"
+            >
+              <motion.div variants={fadeIn} className="space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter text-white sm:text-5xl xl:text-6xl/none">
                   Transform Your Home Improvement Business with AI
                 </h1>
@@ -40,8 +62,11 @@ export default function Home() {
                   Automate your operations, enhance customer engagement, and
                   boost revenue with our cutting-edge AI solutions.
                 </p>
-              </div>
-              <div className="flex flex-col gap-3 min-[400px]:flex-row justify-center lg:justify-start">
+              </motion.div>
+              <motion.div
+                variants={fadeIn}
+                className="flex flex-col gap-3 min-[400px]:flex-row justify-center lg:justify-start"
+              >
                 <Button
                   size="lg"
                   className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
@@ -56,9 +81,15 @@ export default function Home() {
                 >
                   Book a Demo
                 </Button>
-              </div>
-            </div>
-            <DashboardPreview />
+              </motion.div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <DashboardPreview />
+            </motion.div>
           </div>
         </div>
       </section>
@@ -72,9 +103,18 @@ export default function Home() {
       />
 
       {/* Services Section */}
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-white/5">
+      <motion.section
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+        variants={stagger}
+        className="w-full py-12 md:py-24 lg:py-32 bg-white/5"
+      >
         <div className="  px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+          <motion.div
+            variants={fadeIn}
+            className="flex flex-col items-center justify-center space-y-4 text-center"
+          >
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter text-white sm:text-5xl">
                 Our Services
@@ -84,53 +124,68 @@ export default function Home() {
                 industry
               </p>
             </div>
-          </div>
-          <div className="mx-auto grid gap-6 py-12 lg:grid-cols-3">
-            <ServiceCard
-              icon={<Mail className="h-6 w-6" />}
-              title="Email Outreach"
-              description="Automated email campaigns that convert prospects into customers"
-              percentage="285"
-              metric="more leads"
-            />
-            <ServiceCard
-              icon={<Bot className="h-6 w-6" />}
-              title="Custom GPT Systems"
-              description="AI chatbots trained specifically for home improvement inquiries"
-              percentage="156"
-              metric="conversion"
-            />
-            <ServiceCard
-              icon={<Phone className="h-6 w-6" />}
-              title="Phone Dialer Systems"
-              description="Intelligent call automation for improved customer engagement"
-              percentage="198"
-              metric="efficiency"
-            />
-            <ServiceCard
-              icon={<Share2 className="h-6 w-6" />}
-              title="Social Media Management"
-              description="AI-powered content creation and scheduling"
-              percentage="324"
-              metric="engagement"
-            />
-            <ServiceCard
-              icon={<BarChart3 className="h-6 w-6" />}
-              title="Performance Analytics"
-              description="Real-time insights and performance tracking"
-              percentage="167"
-              metric="accuracy"
-            />
-            <ServiceCard
-              icon={<MessageSquare className="h-6 w-6" />}
-              title="Text Message Systems"
-              description="Automated SMS campaigns and customer follow-ups"
-              percentage="245"
-              metric="response"
-            />
-          </div>
+          </motion.div>
+          <motion.div
+            variants={stagger}
+            className="mx-auto grid gap-6 py-12 lg:grid-cols-3"
+          >
+            <motion.div variants={fadeIn}>
+              <ServiceCard
+                icon={<Mail className="h-6 w-6" />}
+                title="Email Outreach"
+                description="Automated email campaigns that convert prospects into customers"
+                percentage="285"
+                metric="more leads"
+              />
+            </motion.div>
+            <motion.div variants={fadeIn}>
+              <ServiceCard
+                icon={<Bot className="h-6 w-6" />}
+                title="Custom GPT Systems"
+                description="AI chatbots trained specifically for home improvement inquiries"
+                percentage="156"
+                metric="conversion"
+              />
+            </motion.div>
+            <motion.div variants={fadeIn}>
+              <ServiceCard
+                icon={<Phone className="h-6 w-6" />}
+                title="Phone Dialer Systems"
+                description="Intelligent call automation for improved customer engagement"
+                percentage="198"
+                metric="efficiency"
+              />
+            </motion.div>
+            <motion.div variants={fadeIn}>
+              <ServiceCard
+                icon={<Share2 className="h-6 w-6" />}
+                title="Social Media Management"
+                description="AI-powered content creation and scheduling"
+                percentage="324"
+                metric="engagement"
+              />
+            </motion.div>
+            <motion.div variants={fadeIn}>
+              <ServiceCard
+                icon={<BarChart3 className="h-6 w-6" />}
+                title="Performance Analytics"
+                description="Real-time insights and performance tracking"
+                percentage="167"
+                metric="accuracy"
+              />
+            </motion.div>
+            <motion.div variants={fadeIn}>
+              <ServiceCard
+                icon={<MessageSquare className="h-6 w-6" />}
+                title="Text Message Systems"
+                description="Automated SMS campaigns and customer follow-ups"
+                percentage="245"
+                metric="response"
+              />
+            </motion.div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Second CTA Section */}
       <CTASection
@@ -141,9 +196,18 @@ export default function Home() {
       />
 
       {/* Why Choose Us Section */}
-      <section className="w-full py-12 md:py-24 lg:py-32">
+      <motion.section
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+        variants={stagger}
+        className="w-full py-12 md:py-24 lg:py-32"
+      >
         <div className="  px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+          <motion.div
+            variants={fadeIn}
+            className="flex flex-col items-center justify-center space-y-4 text-center"
+          >
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter text-white sm:text-5xl">
                 Why Choose Us
@@ -152,26 +216,35 @@ export default function Home() {
                 Industry expertise combined with cutting-edge AI technology
               </p>
             </div>
-          </div>
-          <div className="mx-auto grid gap-6 py-12 lg:grid-cols-3">
-            <TestimonialCard
-              quote="AscendFlow transformed our business. Our customer engagement increased by 300% in just two months."
-              author="John Smith"
-              company="Elite Home Services"
-            />
-            <TestimonialCard
-              quote="The AI solutions provided by AscendFlow have streamlined our operations significantly."
-              author="Sarah Johnson"
-              company="Modern Renovations"
-            />
-            <TestimonialCard
-              quote="Outstanding results! Our lead conversion rate doubled after implementing their AI systems."
-              author="Mike Williams"
-              company="Premium Contractors"
-            />
-          </div>
+          </motion.div>
+          <motion.div
+            variants={stagger}
+            className="mx-auto grid gap-6 py-12 lg:grid-cols-3"
+          >
+            <motion.div variants={fadeIn}>
+              <TestimonialCard
+                quote="AscendFlow transformed our business. Our customer engagement increased by 300% in just two months."
+                author="John Smith"
+                company="Elite Home Services"
+              />
+            </motion.div>
+            <motion.div variants={fadeIn}>
+              <TestimonialCard
+                quote="The AI solutions provided by AscendFlow have streamlined our operations significantly."
+                author="Sarah Johnson"
+                company="Modern Renovations"
+              />
+            </motion.div>
+            <motion.div variants={fadeIn}>
+              <TestimonialCard
+                quote="Outstanding results! Our lead conversion rate doubled after implementing their AI systems."
+                author="Mike Williams"
+                company="Premium Contractors"
+              />
+            </motion.div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Third CTA Section */}
       <CTASection
@@ -182,9 +255,18 @@ export default function Home() {
       />
 
       {/* Contact Section */}
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-white/5">
+      <motion.section
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+        variants={fadeIn}
+        className="w-full py-12 md:py-24 lg:py-32 bg-white/5"
+      >
         <div className="  px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+          <motion.div
+            variants={fadeIn}
+            className="flex flex-col items-center justify-center space-y-4 text-center"
+          >
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter text-white sm:text-5xl">
                 Get in Touch
@@ -194,12 +276,12 @@ export default function Home() {
                 consultation.
               </p>
             </div>
-          </div>
+          </motion.div>
           <div className="mx-auto max-w-2xl py-12">
             <ContactForm />
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Footer */}
       <Footer />
