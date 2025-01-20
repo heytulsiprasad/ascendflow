@@ -2,20 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer utilities {
+  .glass-effect {
+    background: linear-gradient(
+      115deg,
+      rgb(255 255 255 / 0.05),
+      rgb(255 255 255 / 0)
+    );
+    backdrop-filter: blur(10px);
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.glow {
+  box-shadow: 0 0 30px -5px rgb(120 0 255 / 0.3);
+}
+
+@keyframes gradient-shift {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-gradient {
+  animation: gradient-shift 20s linear infinite;
 }
