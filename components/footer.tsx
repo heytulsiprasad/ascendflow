@@ -117,7 +117,7 @@ export function Footer() {
         </div>
         <div className="mt-8 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-gray-400">
-            © 2024 AscendFlow. All rights reserved.
+            © {new Date().getFullYear()} AscendFlow. All rights reserved.
           </p>
           <div className="flex gap-4">
             <a href="#" className="text-sm text-gray-400 hover:text-white">

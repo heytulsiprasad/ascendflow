@@ -19,6 +19,7 @@ import { Footer } from "@/components/footer";
 import { FloatingNavbar } from "@/components/floating-navbar";
 import { DashboardPreview } from "@/components/dashboard-preview";
 import { motion } from "framer-motion";
+import { MEETING_LINK } from "@/lib/constants";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -69,6 +70,7 @@ export default function Home() {
               >
                 <Button
                   size="lg"
+                  onClick={() => window.open(MEETING_LINK)}
                   className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
                 >
                   Get Started
@@ -77,6 +79,7 @@ export default function Home() {
                 <Button
                   size="lg"
                   variant="outline"
+                  onClick={() => window.open(MEETING_LINK)}
                   className="text-white border-white hover:bg-white/10"
                 >
                   Book a Demo
@@ -104,6 +107,7 @@ export default function Home() {
 
       {/* Services Section */}
       <motion.section
+        id="services"
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
@@ -197,6 +201,7 @@ export default function Home() {
 
       {/* Why Choose Us Section */}
       <motion.section
+        id="about"
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
@@ -256,6 +261,7 @@ export default function Home() {
 
       {/* Contact Section */}
       <motion.section
+        id="contact"
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}

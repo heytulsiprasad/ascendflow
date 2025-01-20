@@ -22,7 +22,7 @@ export function CTASection({
       <div
         className={`absolute inset-0 bg-gradient-to-r ${gradient} opacity-10 animate-gradient`}
       />
-      <div className="  px-4 md:px-6">
+      <div className="  px-4 md:px-6 relative z-10">
         <div className="flex flex-col items-center text-center space-y-4">
           <h2 className="text-3xl md:text-4xl font-bold text-white">{title}</h2>
           <p className="text-xl text-gray-300 max-w-[600px]">{subtitle}</p>

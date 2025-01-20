@@ -21,6 +21,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .glow {
   box-shadow: 0 0 30px -5px rgb(120 0 255 / 0.3);
 }
