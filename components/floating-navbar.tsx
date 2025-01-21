@@ -33,8 +33,8 @@ export function FloatingNavbar() {
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="mx-4 my-4 glass-effect border border-white/10 rounded-full dark:bg-gray-900 dark:border-gray-700">
-        <div className="  mx-auto">
+      <div className="mx-4 my-4 glass-effect border border-white/10 rounded-2xl dark:bg-gray-900 dark:border-gray-700">
+        <div className="mx-auto">
           <div className="flex items-center justify-between h-16 px-4">
             <Link href="/" className="flex items-center space-x-2">
               <Bot className="h-8 w-8 text-purple-400" />
@@ -43,30 +43,16 @@ export function FloatingNavbar() {
               </span>
             </Link>
             <nav className="hidden md:flex items-center space-x-6">
-              <Link
-                href="#services"
-                className="text-sm text-gray-300 hover:text-white transition-colors"
-              >
-                Services
-              </Link>
-              <Link
-                href="#about"
-                className="text-sm text-gray-300 hover:text-white transition-colors"
-              >
-                About
-              </Link>
-              <Link
-                href="#testimonials"
-                className="text-sm text-gray-300 hover:text-white transition-colors"
-              >
-                Testimonials
-              </Link>
-              <Link
-                href="#contact"
-                className="text-sm text-gray-300 hover:text-white transition-colors"
-              >
-                Contact
-              </Link>
+              {["Services", "About", "Testimonials", "Contact"].map((item) => (
+                <Link
+                  key={item}
+                  href={`#${item.toLowerCase()}`}
+                  className="relative text-sm text-gray-300 hover:text-white transition-colors nav-link"
+                >
+                  {item}
+                  <span className="nav-underline" />
+                </Link>
+              ))}
             </nav>
             <div className="flex items-center space-x-4">
               {/* <Button

@@ -41,3 +41,24 @@ html {
 .animate-gradient {
   animation: gradient-shift 20s linear infinite;
 }
+
+.nav-link {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-underline {
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #9333ea, #4f46e5);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover .nav-underline {
+  transform: scaleX(1);
+}
