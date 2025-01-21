@@ -56,6 +56,7 @@ export default function RootLayout({
           content="https://www.ascendflow.pro/og-image.png"
         />
         <title>AscendFlow - AI Solutions for Home Improvement</title>
+        <link rel="icon" href="/ascendflow-favicon.svg" type="image/svg+xml" />
         <link rel="canonical" href="https://www.ascendflow.pro" />
       </head>
       <body className={inter.className}>
