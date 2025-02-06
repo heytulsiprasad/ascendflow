@@ -37,10 +37,10 @@ export default function RootLayout({
           content="Premier AI automation solutions for the home improvement sector"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.ascendflow.pro" />
+        <meta property="og:url" content="https://www.ascendflowhq.com" />
         <meta
           property="og:image"
-          content="https://www.ascendflow.pro/og-image.png"
+          content="https://www.ascendflowhq.com/og-image.png"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
@@ -53,11 +53,11 @@ export default function RootLayout({
         />
         <meta
           name="twitter:image"
-          content="https://www.ascendflow.pro/og-image.png"
+          content="https://www.ascendflowhq.com/og-image.png"
         />
         <title>AscendFlow - AI Solutions for Home Improvement</title>
         <link rel="icon" href="/ascendflow-favicon.svg" type="image/svg+xml" />
-        <link rel="canonical" href="https://www.ascendflow.pro" />
+        <link rel="canonical" href="https://www.ascendflowhq.com" />
       </head>
       <body className={inter.className}>
         <div className="min-h-screen bg-black">
