@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.ascendflow.com/sitemap.xml
+Sitemap: https://www.ascendflowhq.com/sitemap.xml
